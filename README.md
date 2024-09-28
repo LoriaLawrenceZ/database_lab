@@ -20,12 +20,12 @@ Repository for database study through VR Software
 
 ---
 
-# DQL
+# DQL | Data Query Language
 
 ```SGBD
 SELECT * FROM <tabela>;
 ```
-
+>concatenação `||`
 ```SGBD
 SELECT <campo> || <campo> FROM <tabela>;
 ``` 
@@ -36,4 +36,20 @@ SELECT <campo> || <campo> as <alias> FROM <tabela> ORDER BY <alias>;
 
 ```SGBD
 SELECT <campo> || <campo> as <alias> FROM <tabela> ORDER BY <alias> DESC;
-``` 
+```
+
+```SGBD
+SELECT DISTINCT <campo> || <campo> as <alias> FROM <tabela> ORDER BY <alias> DESC;
+```
+
+```SGBD
+SELECT <campo> || <campo> as <alias> FROM <tabela> ORDER BY <alias> DESC GROUP BY <alias>;
+```
+
+```SGBD
+SELECT <campo> || <campo> as <alias> FROM <tabela> WHERE <campo> = <value> ORDER BY <alias> DESC GROUP BY <campo>;
+```
+
+```SGBD
+SELECT <campo> || <campo> as <alias> FROM <tabela> ORDER BY <alias> DESC GROUP BY <alias> HAVING <alias> = <value>;
+```
