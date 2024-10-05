@@ -23,33 +23,65 @@ Repository for database study through VR Software
 # DQL | Data Query Language
 
 ```SGBD
-SELECT * FROM <tabela>;
+SELECT * FROM <table>;
 ```
 >concatenação `||`
 ```SGBD
-SELECT <campo> || <campo> FROM <tabela>;
+SELECT <column> || <column> FROM <table>;
 ``` 
 
 ```SGBD
-SELECT <campo> || <campo> as <alias> FROM <tabela> ORDER BY <alias>;
+SELECT <column> || <column> as <alias> FROM <table> ORDER BY <alias>;
 ```
 
 ```SGBD
-SELECT <campo> || <campo> as <alias> FROM <tabela> ORDER BY <alias> DESC;
+SELECT <column> || <column> as <alias> FROM <table> ORDER BY <alias> DESC;
 ```
 
 ```SGBD
-SELECT DISTINCT <campo> || <campo> as <alias> FROM <tabela> ORDER BY <alias> DESC;
+SELECT DISTINCT <column> || <column> as <alias> FROM <table> ORDER BY <alias> DESC;
 ```
 
 ```SGBD
-SELECT <campo> || <campo> as <alias> FROM <tabela> ORDER BY <alias> DESC GROUP BY <alias>;
+SELECT <column> || <column> as <alias> FROM <table> ORDER BY <alias> DESC GROUP BY <alias>;
 ```
 
 ```SGBD
-SELECT <campo> || <campo> as <alias> FROM <tabela> WHERE <campo> = <value> ORDER BY <alias> DESC GROUP BY <campo>;
+SELECT <column> || <column> as <alias> FROM <table> WHERE <column> = <value> ORDER BY <alias> DESC GROUP BY <column>;
 ```
 
 ```SGBD
-SELECT <campo> || <campo> as <alias> FROM <tabela> ORDER BY <alias> DESC GROUP BY <alias> HAVING <alias> = <value>;
+SELECT <column> || <column> as <alias> FROM <table> ORDER BY <alias> DESC GROUP BY <alias> HAVING <alias> = <value>;
+```
+
+```SGBD
+SELECT * FROM <table> WHERE <column> = 1 OR <column> = 2 OR <column> = 3 OR <column> = 4 OR <column> = 5;
+```
+
+```SGBD
+SELECT * FROM <table> WHERE <column> IN (1, 2, 3, 4, 5);
+```
+
+```SGBD
+SELECT * FROM <table> WHERE <column> BETWEEN 1 AND 5;
+```
+
+```SGBD
+SELECT * FROM <table> WHERE <column> LIKE '%TeStE%';
+```
+
+```SGBD
+SELECT * FROM <table> WHERE <column> ILIKE '%tEsTe%';
+```
+
+```SGBD
+SELECT * FROM <table> WHERE <column> LIKE 'T__TE%';
+```
+
+```SGBD
+SELECT * FROM <table> WHERE <column> ILIKE '%$%%' ESCAPE '$';
+```
+
+```SGBD
+CREATE DATABASE <database_2> WITH TEMPLATE <database_1>;
 ```
